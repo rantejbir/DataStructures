@@ -1,8 +1,9 @@
+# this class will create a new node with a value that is passed
+# and the node will point to next value that will be none and
+# will make it last node of the linked list.
 class Node:
     def __init__(self, value):
-        # this class will create a new node with a value that is passed
-        # and the node will point to next value that will be none and
-        # will make it last node of the linked list.
+
         self.value = value
         self.next = None
 
@@ -32,12 +33,13 @@ class LinkedList:
     def append(self, value):
         # create new node
         # add node to last
+        # it will create a new node and point
+        # head and tail to same node as it only
+        # points to same node as it is only element inside it
         new_node = Node(value)
         # if list is empty
         if self.head is None:
-            # it will create a new node and point
-            # head and tail to same node as it only
-            # points to same node as it is only element inside it
+
             self.head = new_node
             self.tail = new_node
         # if list is not empty

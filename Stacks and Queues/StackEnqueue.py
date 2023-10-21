@@ -10,17 +10,14 @@ class MyQueue:
         return len(self.stack1) == 0
 
     def enqueue(self, param):
-        # if self.is_empty():
-        #     self.stack1.append(param)
 
-        # size = len(self.stack1)
         while not self.is_empty():
             self.stack2.append(self.stack1.pop())
-        print(self.stack2)
+
         self.stack1.append(param)
         while not len(self.stack2) == 0:
             self.stack1.append(self.stack2.pop())
-        print(self.stack1)
+
 
 
 # Create a new queue
